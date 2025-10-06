@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html_in_big_2025</title>
-    <link rel = 'stylesheet' href = 'styles.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITF Simple Bank</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <p>68070003</p>
-        <h2>ITF Website</h2>
-        <p>Week 14</p>
-    </nav>
-    <div class="container">
-        <img src ="skull.jpg"width="120" height="100" alt="skull" />
-        
-        <div>
-        <h2 id="my-title">ITF Simple Bank</h2>
-        <h3 id ="title2" >Welcome to my first HTML + CSS + JS website!</h3>
-        </div>
+  <nav>
+    <p>67070057</p>
+    <h2>ITF Website</h2>
+    <p>Week 14</p>
+  </nav>
+
+  <div class="header">
+    <h2>ITF Simple Bank</h2>
+    <p>Welcome to my first HTML + CSS + JS website!</p>
+  </div>
+
+  <div class="section">
+    <h3>Account Information</h3>
+    <img src="account.png" alt="account" class="icon">
+    <div class="info">
+      <p>Name: <b>Kittapat Praisalee</b></p>
+      <p>Type: Saving Account</p>
     </div>
-    <div class="textarea">
-        <h> Textarea</h>
+  </div>
+
+  <div class="section">
+    <h3>Balance Information</h3>
+    <img src="bank.jpg" alt="bank" class="icon">
+    <div class="info">
+      <label>Current account balance:</label>
+      <input type="number" id="accountBalance" value="1000"><br>
+      <label>Current cash balance:</label>
+      <input type="number" id="cashBalance" value="1000">
+      <button onclick="updateBalance()">Change</button>
     </div>
-    <div class="content"> 
-        <h> Account Overview</h>
+  </div>
+
+  <div class="section">
+    <h3>Bank Operation</h3>
+    <img src="clash.jpg" alt="cash" class="icon">
+    <div class="info">
+      <label>Operation:</label>
+      <select id="operation">
+        <option value="deposit">Deposit</option>
+        <option value="withdraw">Withdraw</option>
+      </select>
+      <input type="number" id="amount" placeholder="Enter amount">
+      <button onclick="proceed()">Proceed</button>
     </div>
-    <script src="scripts.js"></script>
+  </div>
+
+  <div class="section">
+    <h3>Transaction History</h3>
+    <textarea id="output" readonly>
+1, Current account balance: 1000, Current cash balance: 1000
+    </textarea>
+  </div>
+
+  <footer>
+    <p>Created by Kittapat Praisalee | ITF Week 14 Project</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
